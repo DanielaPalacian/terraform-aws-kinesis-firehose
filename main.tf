@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "eu-central-1"
+}
 #data "aws_region" "default" {}
 data "aws_region" "current" {
   current = true
