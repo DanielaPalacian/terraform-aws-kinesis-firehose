@@ -1,4 +1,5 @@
-data "aws_region" "default" {}
+#data "aws_region" "default" {}
+data "aws_region" "current" {}
 
 resource "aws_kinesis_firehose_delivery_stream" "kinesis_firehose_stream" {
   name        = var.kinesis_firehose_stream_name
