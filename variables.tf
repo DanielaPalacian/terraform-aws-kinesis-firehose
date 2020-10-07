@@ -49,11 +49,7 @@ variable "glue_catalog_table_name" {
 variable "glue_catalog_table_columns" {
   description = "A list of table columns"
   type        = list(string)
-   default = {
-    "column1" = "default_glue_catalog_table_columns1",
-    "column2" ="default_glue_catalog_table_columns2",
-    "column3" = "default_glue_catalog_table_columns3",
-     }
+   default = {}
   
 }
 
