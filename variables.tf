@@ -1,3 +1,8 @@
+variable "region" {
+  description = "Region"
+  type        = string
+  default = "eu-central-1"
+}
 variable "kinesis_firehose_stream_name" {
   description = "Name to be use on kinesis firehose stream"
   type        = string
