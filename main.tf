@@ -150,12 +150,12 @@ resource "aws_glue_catalog_table" "glue_catalog_table" {
       }
     }
 
-    columns = var.glue_catalog_table_columns
+    #columns = var.glue_catalog_table_columns
     
       columns {
       name = "my_string"
       type = "string"
-        
+      value = var.glue_catalog_table_columns[1]      
     }
   }
 }
