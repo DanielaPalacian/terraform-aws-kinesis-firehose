@@ -7,7 +7,7 @@ variable "kinesis_firehose_stream_name" {
   description = "Name to be use on kinesis firehose stream"
   type        = string
   default = "default_kinesis_firehose_stream_name"
-}
+} 
 
 variable "kinesis_firehose_stream_backup_prefix" {
   description = "The prefix name to use for the kinesis backup"
