@@ -36,10 +36,10 @@ resource "aws_kinesis_firehose_delivery_stream" "kinesis_firehose_stream" {
       processors {
         type = "Lambda"
 
-        parameters = [{
+        parameters {
           parameter_name  = "LambdaArn"
           parameter_value = "${aws_lambda_function.lambda_kinesis_firehose_data_transformation.arn}:$LATEST"
-        }]
+        }
       }
     }
 
