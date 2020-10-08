@@ -143,7 +143,7 @@ resource "aws_glue_catalog_table" "glue_catalog_table" {
       name                  = "JsonSerDe"
       serialization_library = "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe"
 
-      parameters  {
+      parameters =  {
         "serialization.format" = 1
         "explicit.null"        = false
         "parquet.compression"  = "SNAPPY"
