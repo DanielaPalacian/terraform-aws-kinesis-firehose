@@ -33,7 +33,7 @@ resource "aws_kinesis_firehose_delivery_stream" "kinesis_firehose_stream" {
     processing_configuration {
       enabled = true
 
-      processors = [{
+      processors  [{
         type = "Lambda"
 
         parameters = [{
