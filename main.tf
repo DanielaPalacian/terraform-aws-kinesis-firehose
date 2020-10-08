@@ -153,9 +153,16 @@ resource "aws_glue_catalog_table" "glue_catalog_table" {
     #columns = var.glue_catalog_table_columns
     
       columns {
-      name = "my_string"
-      type = "string"
-      value = var.glue_catalog_table_columns[1]      
+      name = "Name"
+      type = "string"     
+    }
+        columns {
+      name = "Birthday"
+      type = "date"     
+    }
+        columns {
+      name = "Age"
+      type = "double"     
     }
   }
 }
