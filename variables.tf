@@ -36,7 +36,7 @@ variable "lambda_function_name" {
 variable "lambda_function_file_name" {
   description = "The lambda function file name"
   type        = string
-  default = "default_lambda_function_file_name"
+  default = "lambda_function_file_name"
 }
 
 variable "glue_catalog_database_name" {
