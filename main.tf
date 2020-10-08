@@ -33,14 +33,14 @@ resource "aws_kinesis_firehose_delivery_stream" "kinesis_firehose_stream" {
     processing_configuration {
       enabled = true
 
-      processors = [{
+      processors {
         type = "Lambda"
 
         parameters = [{
           parameter_name  = "LambdaArn"
           parameter_value = "${aws_lambda_function.lambda_kinesis_firehose_data_transformation.arn}:$LATEST"
         }]
-      }]
+      }
     }
 
     cloudwatch_logging_options {
