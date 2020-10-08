@@ -134,16 +134,16 @@ resource "aws_glue_catalog_table" "glue_catalog_table" {
     "classification" = "parquet"
   }
 
-  storage_descriptor = {
+  storage_descriptor  {
     input_format  = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat"
     output_format = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat"
     location      = "s3://${aws_s3_bucket.kinesis_firehose_stream_bucket.bucket}/"
 
-    ser_de_info = {
+    ser_de_info  {
       name                  = "JsonSerDe"
       serialization_library = "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe"
 
-      parameters = {
+      parameters  {
         "serialization.format" = 1
         "explicit.null"        = false
         "parquet.compression"  = "SNAPPY"
